@@ -1,4 +1,3 @@
-/* General Styles */
 body {
     display: flex;
     justify-content: center;
@@ -7,7 +6,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Chat Container */
 .chat-app {
     max-width: 600px;
     margin: 50px auto;
@@ -20,7 +18,6 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
-/* Light Mode Variables */
 .light-mode {
     --background-color: #f9f9f9;
     --text-color: #333;
@@ -35,7 +32,6 @@ body {
     --toggle-hover-text-color: #fff;
 }
 
-/* Dark Mode Variables */
 .dark-mode {
     --background-color: #1c1c1c;
     --text-color: #f1f1f1;
@@ -50,7 +46,6 @@ body {
     --toggle-hover-text-color: #333;
 }
 
-/* Header Styles */
 .chat-header {
     display: flex;
     justify-content: space-between;
@@ -80,7 +75,6 @@ body {
     color: var(--toggle-hover-text-color);
 }
 
-/* Input Styles */
 .chat-input {
     width: 100%;
     padding: 10px;
@@ -98,7 +92,6 @@ body {
     font-weight: bold;
 }
 
-/* Messages */
 .messages {
     max-height: 300px;
     overflow-y: auto;
@@ -138,7 +131,6 @@ body {
     font-size: 1rem;
 }
 
-/* Input Container */
 .input-container {
     display: flex;
     gap: 10px;
@@ -159,7 +151,6 @@ body {
     background-color: #0056b3;
 }
 
-/* Animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
