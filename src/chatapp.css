@@ -1,0 +1,183 @@
+/* General Styles */
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Chat Container */
+.chat-app {
+    max-width: 600px;
+    margin: 50px auto;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.8s ease-in-out;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light Mode Variables */
+.light-mode {
+    --background-color: #f9f9f9;
+    --text-color: #333;
+    --input-background: #fff;
+    --input-border: #ccc;
+    --message-self-bg: #007bff;
+    --message-self-color: #fff;
+    --message-other-bg: #e0e0e0;
+    --message-other-color: #333;
+    --toggle-text-color: #333;
+    --toggle-hover-bg: #333;
+    --toggle-hover-text-color: #fff;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --background-color: #1c1c1c;
+    --text-color: #f1f1f1;
+    --input-background: #333;
+    --input-border: #555;
+    --message-self-bg: #007bff;
+    --message-self-color: #fff;
+    --message-other-bg: #444;
+    --message-other-color: #f1f1f1;
+    --toggle-text-color: #f1f1f1;
+    --toggle-hover-bg: #f1f1f1;
+    --toggle-hover-text-color: #333;
+}
+
+/* Header Styles */
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.chat-title {
+    font-size: 2.5rem;
+    margin: 0;
+    color: var(--text-color);
+}
+
+.mode-toggle {
+    background: none;
+    border: 2px solid currentColor;
+    border-radius: 12px;
+    padding: 5px 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    color: var(--toggle-text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.mode-toggle:hover {
+    background-color: var(--toggle-hover-bg);
+    color: var(--toggle-hover-text-color);
+}
+
+/* Input Styles */
+.chat-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--input-border);
+    border-radius: 12px;
+    font-size: 1rem;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.username-input {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Messages */
+.messages {
+    max-height: 300px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    animation: slideUp 0.5s ease-in-out;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.self {
+    background-color: var(--message-self-bg);
+    color: var(--message-self-color);
+    text-align: right;
+}
+
+.other {
+    background-color: var(--message-other-bg);
+    color: var(--message-other-color);
+    text-align: left;
+}
+
+.username {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.text {
+    font-size: 1rem;
+}
+
+/* Input Container */
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.send-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.send-button:hover {
+    background-color: #0056b3;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
